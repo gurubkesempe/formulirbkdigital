@@ -39,9 +39,7 @@
   }
 
   async function apiGetList() {
-    const url = `${CONFIG.API_URL}?action=list&password=${encodeURIComponent(adminPassword)}`;
-    const res = await fetch(url);
-    return res.json();
+    return apiPost({ action: "list", password: adminPassword });
   }
 
   function escapeHtml(str) {
