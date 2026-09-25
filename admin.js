@@ -73,8 +73,8 @@
       "",
     ];
     if (entry.linkAkses) lines.push(`🔗 *Link Akses Sistem:*\n${entry.linkAkses}`, "");
-    if (entry.linkAppscript) lines.push(`⚙️ *Link Appscript:*\n${entry.linkAppscript}`, "");
-    if (entry.tokenAppscript) lines.push(`🔑 *Token Appscript:*\n${entry.tokenAppscript}`, "");
+    if (entry.linkAppscript) lines.push(`⚙️ *URL Web App Google Apps Script:*\n${entry.linkAppscript}`, "");
+    if (entry.tokenAppscript) lines.push(`🔑 *Token / Kata Sandi Akses:*\n${entry.tokenAppscript}`, "");
     if (entry.linkDatabase) lines.push(`🗄️ *Link Database:*\n${entry.linkDatabase}`, "");
     if (entry.linkPanduan) lines.push(`📘 *Panduan Penggunaan:*\n${entry.linkPanduan}`, "");
     lines.push("Mohon disimpan baik-baik. Jika ada kendala saat penggunaan sistem, silakan hubungi kami melalui chat ini.", "", "Terima kasih 🙏");
@@ -208,12 +208,12 @@
         </div>
         <div class="row-2">
           <div class="field">
-            <label>Link Appscript</label>
+            <label>URL Web App Google Apps Script</label>
             <input type="text" data-key="linkAppscript" value="${escapeHtml(e.linkAppscript)}" placeholder="https://script.google.com/...">
           </div>
           <div class="field">
-            <label>Token Appscript</label>
-            <input type="text" data-key="tokenAppscript" value="${escapeHtml(e.tokenAppscript)}" placeholder="Token">
+            <label>Token / Kata Sandi Akses</label>
+            <input type="text" data-key="tokenAppscript" value="${escapeHtml(e.tokenAppscript)}" placeholder="Token / kata sandi">
           </div>
         </div>
         <div class="field">
