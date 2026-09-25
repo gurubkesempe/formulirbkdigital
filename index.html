@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Instalasi Sistem BK Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-shell">
+  <div class="auth-card">
+
+    <!-- Panel kiri: branding -->
+    <div class="brand-panel">
+      <div>
+        <div class="brand-mark"><span class="dot"></span> Sistem BK Digital</div>
+        <h1>Satu formulir untuk mengaktifkan layanan BK sekolah Anda.</h1>
+        <p>Isi data koordinator BK, lalu tim kami akan memasang sistem dan mengirim seluruh akses langsung ke WhatsApp Anda.</p>
+      </div>
+
+      <ol class="brand-steps">
+        <li><span class="num">01</span> Koordinator BK mengisi formulir ini.</li>
+        <li><span class="num">02</span> Tim kami memasang sistem untuk sekolah Anda.</li>
+        <li><span class="num">03</span> Link akses, database, dan panduan dikirim otomatis ke WhatsApp.</li>
+      </ol>
+
+      <div class="brand-foot">Data Anda hanya digunakan untuk proses instalasi &amp; pengiriman akses.</div>
+    </div>
+
+    <!-- Panel kanan: form -->
+    <div class="form-panel">
+      <div class="eyebrow-link">Formulir Pendaftaran</div>
+      <h2>Daftarkan sekolah Anda</h2>
+      <p class="lede">Lengkapi data di bawah ini sesuai koordinator BK yang akan menjadi Admin sistem.</p>
+
+      <div class="status-banner" id="statusBanner"></div>
+
+      <form id="daftarForm" novalidate>
+        <div class="field" data-field="nama">
+          <label for="nama">Nama Koordinator BK</label>
+          <input type="text" id="nama" name="nama" autocomplete="name" placeholder="Contoh: Siti Rahma, S.Pd">
+          <div class="error-msg">Nama wajib diisi.</div>
+        </div>
+
+        <div class="field" data-field="asalSekolah">
+          <label for="asalSekolah">Asal Sekolah</label>
+          <input type="text" id="asalSekolah" name="asalSekolah" placeholder="Contoh: SMA Negeri 1 Bandung">
+          <div class="error-msg">Asal sekolah wajib diisi.</div>
+        </div>
+
+        <div class="field" data-field="email">
+          <label for="email">Email (akan didaftarkan ke sistem)</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@sekolah.sch.id">
+          <div class="error-msg">Masukkan alamat email yang valid.</div>
+        </div>
+
+        <div class="field" data-field="passwordEmail">
+          <label for="passwordEmail">Password Email</label>
+          <div class="password-wrap">
+            <input type="password" id="passwordEmail" name="passwordEmail" autocomplete="new-password" placeholder="Minimal 6 karakter">
+            <button type="button" class="toggle-pass" data-target="passwordEmail">Lihat</button>
+          </div>
+          <div class="hint">Digunakan tim kami hanya untuk menghubungkan Appscript ke email ini.</div>
+          <div class="error-msg">Password minimal 6 karakter.</div>
+        </div>
+
+        <div class="field" data-field="nomorWA">
+          <label for="nomorWA">Nomor WhatsApp Aktif</label>
+          <input type="tel" id="nomorWA" name="nomorWA" inputmode="numeric" placeholder="08xxxxxxxxxx">
+          <div class="hint">Seluruh link akses akan dikirim ke nomor ini.</div>
+          <div class="error-msg">Masukkan nomor WhatsApp yang valid (10–15 digit).</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitBtn">Kirim Pendaftaran</button>
+        <div class="form-foot-note">Dengan mengirim formulir ini, Anda menyetujui data digunakan untuk proses instalasi Sistem BK Digital.</div>
+      </form>
+
+      <div class="success-state" id="successState">
+        <div class="icon-circle">✓</div>
+        <h2>Pendaftaran diterima</h2>
+        <p>Terima kasih. Tim kami akan memproses instalasi dan mengirimkan seluruh akses ke nomor WhatsApp yang Anda daftarkan.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Sistem BK Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+  <div class="admin-topbar">
+    <div class="brand-mark"><span class="dot"></span> Sistem BK Digital — Admin</div>
+    <div class="who" id="topbarWho" style="display:none;">
+      <span>Admin</span>
+      <button class="link-btn" id="logoutBtn">Keluar</button>
+    </div>
+  </div>
+
+  <!-- Login -->
+  <div class="admin-login-wrap" id="loginWrap">
+    <div class="admin-login-card">
+      <div class="eyebrow-link">Akses Terbatas</div>
+      <h2>Masuk ke Dashboard</h2>
+      <p class="lede">Masukkan password admin untuk mengelola pendaftaran &amp; mengirim akses ke sekolah.</p>
+      <div class="status-banner" id="loginBanner"></div>
+      <form id="loginForm">
+        <div class="field">
+          <label for="adminPass">Password Admin</label>
+          <div class="password-wrap">
+            <input type="password" id="adminPass" autocomplete="current-password" placeholder="Masukkan password">
+            <button type="button" class="toggle-pass" data-target="adminPass">Lihat</button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="loginBtn">Masuk</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="admin-main" id="dashboardWrap" style="display:none;">
+    <div class="admin-header-row">
+      <div>
+        <h1>Pendaftaran Sekolah</h1>
+        <p>Kelola data koordinator BK &amp; kirim akses sistem langsung ke WhatsApp mereka.</p>
+      </div>
+      <div class="stat-pills">
+        <div class="pill">Total <strong id="statTotal">0</strong></div>
+        <div class="pill">Baru <strong id="statBaru">0</strong></div>
+        <div class="pill">Terkirim <strong id="statTerkirim">0</strong></div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="searchInput" placeholder="Cari nama, sekolah, atau nomor WA...">
+      <select id="filterStatus">
+        <option value="">Semua status</option>
+        <option value="Baru">Baru</option>
+        <option value="Siap Kirim">Siap Kirim</option>
+        <option value="Terkirim">Terkirim</option>
+      </select>
+      <button class="btn-ghost" id="refreshBtn">Muat Ulang</button>
+    </div>
+
+    <div class="entry-list" id="entryList">
+      <div class="empty-state">
+        <h3>Memuat data...</h3>
+        <p>Mohon tunggu sebentar.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
