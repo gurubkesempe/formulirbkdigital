@@ -43,7 +43,7 @@
   }
 
   function escapeHtml(str) {
-    return (str || "").replace(/[&<>"']/g, (c) => ({
+    return String(str ?? "").replace(/[&<>"']/g, (c) => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
     }[c]));
   }
@@ -59,7 +59,7 @@
   }
 
   function normalizePhoneForWa(raw) {
-    let digits = (raw || "").replace(/[^0-9]/g, "");
+    let digits = String(raw ?? "").replace(/[^0-9]/g, "");
     if (digits.startsWith("0")) digits = "62" + digits.slice(1);
     if (!digits.startsWith("62")) digits = "62" + digits;
     return digits;
