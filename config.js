@@ -6,5 +6,5 @@
    "https://script.google.com/macros/s/AKfycb.../exec"
    ========================================================= */
 const CONFIG = {
-  API_URL: "https://script.google.com/macros/s/AKfycbx7KNFZ1wTJZSeldPFvSg9rQl69OJKu4FYbUhwgtmM16dTtJgADpAGIzJ5Avwxxa4oi/exec"
+  API_URL: "https://script.google.com/macros/s/AKfycbxR_ZLPhK5np7p_tPpHlNrcN2_8uZnvWGGFJcWvq10i6M6UTjhvWcX6mX986-Pbe0Hb/exec"
 };
