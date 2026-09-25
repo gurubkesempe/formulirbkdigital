@@ -6,5 +6,5 @@
    "https://script.google.com/macros/s/AKfycb.../exec"
    ========================================================= */
 const CONFIG = {
-  API_URL: "GANTI_DENGAN_URL_WEB_APP_APPS_SCRIPT"
+  API_URL: "https://script.google.com/macros/s/AKfycbzApuiVUEM9_GBHnM78XVmccvfa3PfCfDnu7hmp6Ly71cxEvIIvXX8NrFXYkGf6NAF2/exec"
 };
